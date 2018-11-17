@@ -41,4 +41,9 @@ public class Collegamento {
 		this.doveCopiare = destinazione;
 	}
 
+	@Override
+	public String toString() {
+		return "Collegamento [doveCopiare=" + doveCopiare + ", ordine=" + ordine + ", limite=" + limite + "]";
+	}
+
 }

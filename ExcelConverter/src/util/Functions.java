@@ -3,6 +3,9 @@ package util;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,7 +25,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class Functions {
 
 	private static List<List<HSSFCell>> sheetData;
-	private static String path="C:\\Users\\alfon\\Desktop\\Nuova cartella\\";
+	private static String filePath="\\ModelliEbay\\";
 
 	public static List<List<HSSFCell>> fillTheSheet(InputStream streamStarter, int intestazione) throws IOException {
 		// Create an ArrayList to store the data read from excel sheet.
@@ -107,11 +110,13 @@ public class Functions {
 		int io=0;
 		for (Collegamento employee : collega) {
 			
+			System.out.println(collega.size());
 			//aggiungere altri campi di collegamento dall'arraylist
 			rowCollega.createCell(io).setCellValue(employee.getDestinazione());
 			rowOrdine.createCell(io).setCellValue(employee.getOrdine());
 			rowLimite.createCell(io).setCellValue(employee.getLimite());
 			io++;
+			
 		}
 
 //		// Resize all columns to fit the content size
@@ -119,8 +124,17 @@ public class Functions {
 //			sheet.autoSizeColumn(i);
 //		}
 
-		// Write the output to a file
-		FileOutputStream fileOut = new FileOutputStream(path+fileName+".xls");
+		//Write the output to a file
+		Path path = Paths.get(filePath);
+		if (!Files.exists(path)) {
+            
+            Files.createDirectory(path);
+            System.out.println("Directory created");
+        } else {
+            
+            System.out.println("Directory already exists");
+        }
+		FileOutputStream fileOut = new FileOutputStream(filePath+fileName+".xls");
 		workbook.write(fileOut);
 		fileOut.close();
 

@@ -20,6 +20,7 @@
 
 </head>
 <body>
+<%session.invalidate(); %>
 	<form method="post" action="Serv" id="formSub"
 		enctype="multipart/form-data">
 		<div class="container">

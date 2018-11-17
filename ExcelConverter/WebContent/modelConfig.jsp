@@ -134,7 +134,7 @@
 									<td><%=cell.toString()%></td>
 									<td><input type="number" min="0" max="<%=starterIndex%>"
 										name="collegaModel" id="collegaModel"
-										placeholder="Collega Model" value=0 required></td>
+										placeholder="Collega Model" value=1 required></td>
 									<td><div class="form-check">
 											0 = sovrascritto; 1,2,.. = ordine accodamento <input
 												type="number" min=0 name="ordineAcc" id="ordineAcc"

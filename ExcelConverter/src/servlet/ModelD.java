@@ -33,7 +33,7 @@ public class ModelD extends HttpServlet {
 	 */
 	public ModelD() {
 		super();
-		collega = new ArrayList<Collegamento>();
+		
 	}
 
 	/**
@@ -62,6 +62,7 @@ public class ModelD extends HttpServlet {
 		String[] collegaModel = request.getParameterValues("collegaModel");
 		String[] ordineAcc = request.getParameterValues("ordineAcc");
 		String [] limite= request.getParameterValues("limit");
+		collega = new ArrayList<Collegamento>();
 //		String ordinamento= request.getParameter("ordinamento");
 		int indiceCol = 0;
 		
@@ -92,8 +93,8 @@ public class ModelD extends HttpServlet {
 			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 		}
 
-		
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		request.getSession().invalidate();
+		getServletContext().getRequestDispatcher("/Index.jsp").forward(request, response);
 	}
 
 	/**
