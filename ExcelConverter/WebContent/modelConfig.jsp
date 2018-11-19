@@ -33,10 +33,10 @@
 					%>
 					<input type="text" placeholder="Titolo del modello" name="fileName"
 						id="fileName" class="form-control" required><br>
-					
+
 				</div>
 				<div class="col-md-4">
-				<button type="submit" class="btn btn-success"
+					<button type="submit" class="btn btn-success"
 						onClick="return modelConfirm()" value="Upload">Send</button>
 					<%
 						}
@@ -132,9 +132,9 @@
 									%>
 									<td><%=modelIndex%></td>
 									<td><%=cell.toString()%></td>
-									<td><input type="number" min="0" max="<%=starterIndex%>"
+									<td>0 = non collegato <br><input type="number" min="0" max="<%=starterIndex%>"
 										name="collegaModel" id="collegaModel"
-										placeholder="Collega Model" value=1 required></td>
+										placeholder="Collega Model"  value=0 required></td>
 									<td><div class="form-check">
 											0 = sovrascritto; 1,2,.. = ordine accodamento <input
 												type="number" min=0 name="ordineAcc" id="ordineAcc"
@@ -143,7 +143,7 @@
 										</div></td>
 									<td>
 										<div class="form-check">
-											<input type="number" min="0" name="limit" id="limit"
+											0 = nessun limite<br><input type="number" min="0" name="limit" id="limit"
 												placeholder="Limite caratteri" value="0" required>
 										</div>
 									</td>
