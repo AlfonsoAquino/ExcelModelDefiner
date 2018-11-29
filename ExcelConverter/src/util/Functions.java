@@ -113,7 +113,7 @@ public class Functions {
 			System.out.println(collega.size());
 			//aggiungere altri campi di collegamento dall'arraylist
 			rowCollega.createCell(io).setCellValue(employee.getDestinazione());
-			rowOrdine.createCell(io).setCellValue(0);//employee.getOrdine
+			rowOrdine.createCell(io).setCellValue(employee.getOrdine());//employee.getOrdine
 			rowLimite.createCell(io).setCellValue(employee.getLimite());
 			io++;
 			

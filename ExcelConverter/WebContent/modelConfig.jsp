@@ -115,7 +115,7 @@
 									<th>#</th>
 									<th>Intestazione</th>
 									<th>Collegamento</th>
-									<!--<th>Ordinamento</th>-->
+									<th>Accoda</th>
 									<th>Limiti su caratteri</th>
 								</tr>
 							</thead>
@@ -136,12 +136,12 @@
 									<td>0 = non collegato <br><input type="number" min="0" max="<%=starterIndex%>"
 										name="collegaModel" id="collegaModel"
 										placeholder="Collega Model"  value=0 required></td>
-									<!-- <td><div class="form-check">
-											0 = sovrascritto; 1,2,.. = ordine accodamento <input
-												type="number" min=0 name="ordineAcc" id="ordineAcc"
+									<td><div class="form-check">
+											0 = non accodato<input
+												type="number" min=0 name="ordineAcc" max="<%=starterIndex%>" id="ordineAcc"
 												placeholder="Ordine accodamento" value="0" required>
 											<br>
-										</div></td>-->
+										</div></td>
 									<td>
 										<div class="form-check">
 											0 = nessun limite<br><input type="number" min="0" name="limit" id="limit"
