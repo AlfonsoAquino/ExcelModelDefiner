@@ -25,7 +25,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class Functions {
 
 	private static List<List<HSSFCell>> sheetData;
-	private static String filePath="\\ModelliEbay\\";
+	private static String filePath="\\Template\\";
 
 	public static List<List<HSSFCell>> fillTheSheet(InputStream streamStarter, int intestazione) throws IOException {
 		// Create an ArrayList to store the data read from excel sheet.

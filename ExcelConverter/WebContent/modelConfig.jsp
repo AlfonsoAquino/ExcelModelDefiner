@@ -137,8 +137,8 @@
 										name="collegaModel" id="collegaModel"
 										placeholder="Collega Model"  value=0 required></td>
 									<td><div class="form-check">
-											0 = non accodato<input
-												type="number" min=0 name="ordineAcc" max="<%=starterIndex%>" id="ordineAcc"
+											0 = non accodato; numeri separati da -<input
+												type="text" name="ordineAcc" id="ordineAcc"
 												placeholder="Ordine accodamento" value="0" required>
 											<br>
 										</div></td>

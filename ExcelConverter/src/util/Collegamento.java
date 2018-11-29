@@ -3,25 +3,25 @@ package util;
 public class Collegamento {
 
 	private int doveCopiare;
-	private int ordine;
+	private String ordine;
 	private int limite;
 
 	public Collegamento() {
 
 	}
 
-	public Collegamento(int destinazione, int ordine, int limite) {
+	public Collegamento(int destinazione, String ordine, int limite) {
 		super();
 		this.doveCopiare = destinazione;
 		this.ordine = ordine;
 		this.limite = limite;
 	}
 
-	public int getOrdine() {
+	public String getOrdine() {
 		return ordine;
 	}
 
-	public void setOrdine(int ordine) {
+	public void setOrdine(String ordine) {
 		this.ordine = ordine;
 	}
 

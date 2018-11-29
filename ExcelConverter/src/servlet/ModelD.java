@@ -81,7 +81,7 @@ public class ModelD extends HttpServlet {
 				getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 			} else {
 				
-				Collegamento col=new Collegamento(Integer.parseInt(item.toString()),Integer.parseInt(ordineAcc[indiceCol]),Integer.parseInt(limite[indiceCol]));
+				Collegamento col=new Collegamento(Integer.parseInt(item.toString()),ordineAcc[indiceCol],Integer.parseInt(limite[indiceCol]));
 				collega.add(col);
 				indiceCol++;
 			}
