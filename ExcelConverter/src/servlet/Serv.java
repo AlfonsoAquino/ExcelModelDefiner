@@ -64,7 +64,7 @@ public class Serv extends HttpServlet {
 					sheetDataStarter = Functions.fillTheSheet(streamStarter,inteStarter);
 					session.setAttribute("sheetDataStarter", sheetDataStarter);
 					
-				}else if(token.trim().contains("model")) {
+				}else if(token.trim().contains("ebaySheet")) {
 					
 					InputStream streamStarter = part.getInputStream();
 					sheetDataModel = Functions.fillTheSheet(streamStarter,inteModel);

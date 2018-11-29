@@ -35,7 +35,7 @@
 				<div class="col-md-6">
 					<div class="form-group files color">
 						<label>Upload modello</label> <input type="file"
-							class="form-control" id="model" name="model" multiple="" required>
+							class="form-control" id="ebaySheet" name="ebaySheet" multiple="" required>
 					</div>
 				</div>
 			</div>
